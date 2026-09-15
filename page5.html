@@ -1,0 +1,727 @@
+﻿```html
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เว็บไซต์เพื่อการทดลอง - ผู้จัดทำ</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Tahoma", "Arial", sans-serif;
+        background: #f3eee6;
+        color: #333;
+        line-height: 1.8;
+    }
+
+    /* =========================
+       หัวเว็บไซต์
+       ========================= */
+
+    header {
+        background:
+        linear-gradient(
+            rgba(49, 92, 76, 0.8),
+            rgba(95, 128, 104, 0.7)
+        ),
+        url('watermarked_img_6779758179094076967.jpg')
+        no-repeat center center;
+
+        background-size: cover;
+
+        color: white;
+        text-align: center;
+
+        padding: 60px 20px 50px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 40px;
+        letter-spacing: 1px;
+
+        text-shadow:
+        2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+        margin: 8px 0 0;
+        font-size: 17px;
+
+        text-shadow:
+        1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+
+    /* =========================
+       เมนูเว็บไซต์
+       ========================= */
+
+    nav {
+        background: #ffffff;
+
+        box-shadow:
+        0 3px 10px rgba(0,0,0,0.15);
+
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+
+        padding: 15px 25px;
+
+        text-decoration: none;
+
+        color: #315c4c;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: #315c4c;
+        color: white;
+    }
+
+
+    /* =========================
+       เนื้อหา
+       ========================= */
+
+    main {
+        width: 90%;
+        max-width: 1100px;
+
+        margin: 30px auto;
+    }
+
+    .content-box {
+        background: white;
+
+        margin-bottom: 25px;
+        padding: 30px;
+
+        border-radius: 15px;
+
+        box-shadow:
+        0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .content-box h2 {
+        color: #315c4c;
+
+        border-left: 6px solid #d29b55;
+
+        padding-left: 15px;
+
+        margin-top: 0;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       กล่องข้อมูลผู้จัดทำ
+       ========================= */
+
+    .creator-card {
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 35px;
+
+        background: #f8f5ef;
+
+        padding: 25px;
+
+        margin-bottom: 30px;
+
+        border-radius: 15px;
+
+        border: 1px solid #e0d8ca;
+
+        box-shadow:
+        0 4px 10px rgba(0,0,0,0.08);
+    }
+
+
+    /* ข้อมูลด้านซ้าย */
+
+    .creator-info {
+
+        flex: 1;
+
+        order: 1;
+    }
+
+    .creator-info h3 {
+
+        color: #315c4c;
+
+        font-size: 24px;
+
+        margin-top: 0;
+
+        margin-bottom: 15px;
+    }
+
+    .creator-info p {
+
+        margin: 8px 0;
+
+        font-size: 16px;
+    }
+
+    .creator-info strong {
+
+        color: #315c4c;
+    }
+
+
+    /* ลิงก์ Social Media */
+
+    .creator-info a {
+
+        color: #315c4c;
+
+        font-weight: bold;
+
+        text-decoration: none;
+
+        word-break: break-all;
+    }
+
+    .creator-info a:hover {
+
+        color: #d29b55;
+
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+       รูปภาพด้านขวา
+       ========================= */
+
+    .creator-photo {
+
+        width: 280px;
+
+        flex-shrink: 0;
+
+        text-align: center;
+
+        order: 2;
+    }
+
+    .creator-photo img {
+
+        width: 250px;
+        height: 300px;
+
+        object-fit: cover;
+
+        border-radius: 15px;
+
+        border: 8px solid white;
+
+        outline: 3px solid #d29b55;
+
+        box-shadow:
+        0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .photo-caption {
+
+        margin-top: 12px;
+
+        font-weight: bold;
+
+        color: #315c4c;
+    }
+
+
+    /* =========================
+       กล่องช่องทางการติดต่อ
+       ========================= */
+
+    .social-box {
+
+        margin-top: 18px;
+
+        padding: 15px;
+
+        background: white;
+
+        border-left: 5px solid #d29b55;
+
+        border-radius: 8px;
+    }
+
+    .social-box p {
+
+        margin: 5px 0;
+    }
+
+
+    /* =========================
+       ท้ายเว็บไซต์
+       ========================= */
+
+    footer {
+
+        margin-top: 40px;
+
+        background: #315c4c;
+
+        color: white;
+
+        text-align: center;
+
+        padding: 25px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+
+
+    /* =========================
+       สำหรับโทรศัพท์
+       ========================= */
+
+    @media (max-width: 700px) {
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        .content-box {
+            padding: 20px;
+        }
+
+        .creator-card {
+
+            flex-direction: column;
+
+            text-align: center;
+        }
+
+        .creator-info {
+
+            order: 2;
+
+            width: 100%;
+        }
+
+        .creator-photo {
+
+            order: 1;
+
+            width: 100%;
+        }
+
+        .creator-photo img {
+
+            width: 220px;
+            height: 270px;
+        }
+
+        .creator-info a {
+
+            display: inline-block;
+
+            max-width: 100%;
+        }
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     หัวเว็บไซต์
+     ========================= -->
+
+<header>
+
+    <h1>ผู้จัดทำ</h1>
+
+    <p>
+        เว็บไซต์เพื่อการทดลอง | ท่องเที่ยว ณ เชียงใหม่
+    </p>
+
+</header>
+
+
+<!-- =========================
+     เมนูเว็บไซต์
+     ========================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="https://pakornkiad12.github.io/yak.ren.minecraft/">
+                หน้าแรก
+            </a>
+        </li>
+
+        <li>
+            <a href="page.html">
+                ท่องเที่ยว
+            </a>
+        </li>
+
+        <li>
+            <a href="page2.html">
+                อาหาร/ที่พัก
+            </a>
+        </li>
+
+        <li>
+            <a href="page3.html">
+                ข่าวสาร
+            </a>
+        </li>
+
+        <li>
+            <a href="page4.html">
+                แกลลอรี่
+            </a>
+        </li>
+
+        <li>
+            <a href="page5.html">
+                ผู้จัดทำ
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<br>
+
+
+<!-- =========================
+     เนื้อหา
+     ========================= -->
+
+<main>
+
+
+<section class="content-box">
+
+    <h2>
+        ข้อมูลผู้จัดทำเว็บไซต์
+    </h2>
+
+
+    <!-- =========================
+         ผู้จัดทำคนที่ 1
+         ========================= -->
+
+    <div class="creator-card">
+
+
+        <!-- ข้อมูลด้านซ้าย -->
+
+        <div class="creator-info">
+
+            <h3>
+                ผู้จัดทำคนที่ 1
+            </h3>
+
+            <p>
+                <strong>ชื่อ :</strong>
+                นายชัยอนันต์ บัวขาว
+            </p>
+
+            <p>
+                <strong>ชั้น :</strong>
+                ม.6/2
+            </p>
+
+            <p>
+                <strong>เลขที่ :</strong>
+                2
+            </p>
+
+            <p>
+                <strong>โรงเรียน :</strong>
+                โรงเรียนรัตนราษฎร์บำรุง
+            </p>
+
+            <p>
+                <strong>อำเภอ :</strong>
+                บ้านโป่ง
+            </p>
+
+
+            <!-- ช่องทางการติดต่อ -->
+
+            <div class="social-box">
+
+                <p>
+                    <strong>ช่องทางการติดต่อ</strong>
+                </p>
+
+                <p>
+                    Instagram :
+                    <a
+                    href="https://www.instagram.com/gamayga._?stkn=N2Vhc2xpNTZmYmVv"
+                    target="_blank">
+
+                        @gamayga._
+
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- รูปภาพด้านขวา -->
+
+        <div class="creator-photo">
+
+            <!--
+                รูปภาพผู้จัดทำคนที่ 1
+
+                ให้นำรูปของนายชัยอนันต์
+                มาไว้ในโฟลเดอร์เดียวกับไฟล์ HTML
+
+                และตั้งชื่อไฟล์ว่า
+
+                chaiyanan.jpg
+            -->
+
+            <img
+                src="chaiyanan.jpg"
+                alt="รูปภาพนายชัยอนันต์ บัวขาว">
+
+            <div class="photo-caption">
+                นายชัยอนันต์ บัวขาว
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         ผู้จัดทำคนที่ 2
+         ========================= -->
+
+    <div class="creator-card">
+
+
+        <!-- ข้อมูลด้านซ้าย -->
+
+        <div class="creator-info">
+
+            <h3>
+                ผู้จัดทำคนที่ 2
+            </h3>
+
+            <p>
+                <strong>ชื่อ :</strong>
+                นายปกรณ์เกียรติ ดิษฐสายทอง
+            </p>
+
+            <p>
+                <strong>ชั้น :</strong>
+                ม.6/2
+            </p>
+
+            <p>
+                <strong>เลขที่ :</strong>
+                2
+            </p>
+
+            <p>
+                <strong>โรงเรียน :</strong>
+                โรงเรียนรัตนราษฎร์บำรุง
+            </p>
+
+            <p>
+                <strong>อำเภอ :</strong>
+                บ้านโป่ง
+            </p>
+
+
+            <!-- ช่องทางการติดต่อ -->
+
+            <div class="social-box">
+
+                <p>
+                    <strong>ช่องทางการติดต่อ</strong>
+                </p>
+
+                <p>
+
+                    Instagram :
+
+                    <a
+                    href="https://www.instagram.com/nongpan_22_?stkn=MTM0b3g3MDB5c3VsdQ=="
+                    target="_blank">
+
+                        @nongpan_22_
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    YouTube :
+
+                    <a
+                    href="https://youtube.com/@ceokung?si=bnLewDguz1eAiXRy"
+                    target="_blank">
+
+                        @CEOkung
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- รูปภาพด้านขวา -->
+
+        <div class="creator-photo">
+
+            <!--
+                รูปภาพผู้จัดทำคนที่ 2
+
+                ให้นำรูปของนายปกรณ์เกียรติ
+                มาไว้ในโฟลเดอร์เดียวกับไฟล์ HTML
+
+                และตั้งชื่อไฟล์ว่า
+
+                pakorn.jpg
+            -->
+
+            <img
+                src="pakorn.jpg"
+                alt="รูปภาพนายปกรณ์เกียรติ ดิษฐสายทอง">
+
+            <div class="photo-caption">
+                นายปกรณ์เกียรติ ดิษฐสายทอง
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+     ข้อมูลเพิ่มเติม
+     ========================= -->
+
+<section class="content-box">
+
+    <h2>
+        เกี่ยวกับผู้จัดทำ
+    </h2>
+
+    <p>
+        เว็บไซต์นี้จัดทำขึ้นเพื่อเป็นส่วนหนึ่งของการทดลอง
+        และการเรียนรู้เกี่ยวกับการสร้างเว็บไซต์
+        โดยนำเสนอข้อมูลเกี่ยวกับการท่องเที่ยว
+        จังหวัดเชียงใหม่
+    </p>
+
+    <p>
+        ผู้จัดทำได้รวบรวมข้อมูลเกี่ยวกับสถานที่ท่องเที่ยว
+        อาหาร ที่พัก ข่าวสาร และข้อมูลที่น่าสนใจ
+        เพื่อให้ผู้เข้าชมสามารถศึกษาและค้นหาข้อมูล
+        เกี่ยวกับจังหวัดเชียงใหม่ได้อย่างสะดวก
+    </p>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     ท้ายเว็บไซต์
+     ========================= -->
+
+<footer>
+
+    <p>
+        <b>เว็บไซต์เพื่อการทดลอง</b>
+    </p>
+
+    <p>
+        ท่องเที่ยว ณ เชียงใหม่
+    </p>
+
+    <p>
+        © 2026 Chiang Mai Travel Website
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
