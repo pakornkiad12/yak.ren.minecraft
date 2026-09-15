@@ -1,0 +1,633 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> เว็บไซต์เพื่อการทดลอง - ท่องเที่ยว ณ เชียงใหม่</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Tahoma", "Arial", sans-serif;
+            background: #f3eee6;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* หัวเว็บไซต์ */
+        header {
+            /* เพิ่มภาพพื้นหลัง และไล่สีให้ตัวหนังสือยังอ่านได้ชัดเจน */
+            background: linear-gradient(rgba(49, 92, 76, 0.8), rgba(95, 128, 104, 0.7)), url('watermarked_img_6779758179094076967.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* เมนู */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #315c4c;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #315c4c;
+            color: white;
+        }
+
+        /* รูปภาพในเนื้อหา (คลาสใหม่ที่เพิ่มเข้ามา) */
+        .section-img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* เนื้อหา */
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .content-box {
+            background: white;
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .content-box h2 {
+            color: #315c4c;
+            border-left: 6px solid #d29b55;
+            padding-left: 15px;
+            margin-top: 0;
+        }
+
+        .content-box h3 {
+            color: #5f8068;
+            margin-bottom: 5px;
+        }
+
+        .districts {
+            columns: 2;
+            column-gap: 40px;
+        }
+
+        /* ท้ายเว็บไซต์ */
+        footer {
+            margin-top: 40px;
+            background: #315c4c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* สำหรับโทรศัพท์ */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+
+            .districts {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- หัวเว็บไซต์ -->
+    <header>
+        <h1>ท่องเที่ยว ณ เชียงใหม่</h1>
+        <p>เว็บไซต์เพื่อการทดลอง | ข้อมูลจังหวัดเชียงใหม่</p>
+    </header>
+
+
+ <!-- เมนูเว็บไซต์ -->
+    <nav>
+        <ul>
+            <li><a href="https://pakornkiad12.github.io/yak.ren.minecraft/">หน้าแรก</a></li>
+            <li><a href="page.html">ท่องเที่ยว</a></li>
+            <li><a href="https://www.youtube.com/@CEOkung" target="_blank">อาหาร/ที่พัก</a></li>
+            <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">ข่าวสาร</a></li>
+            <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">แกลลอรี่</a></li>
+            <li><a href="https://www.youtube.com/@CEOkung" target="_blank">ผู้จัดทำ</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+
+</nav>
+     
+<main>
+
+    <!-- หน้าแรก -->
+    <section class="content-box" id="home">
+
+        <h2>ร้านอาหารและที่พักจังหวัดเชียงใหม่</h2>
+
+        <img src="D:\งาน\imges\cm.jpg"
+             alt="จังหวัดเชียงใหม่"
+             class="section-img">
+
+        <p>
+            จังหวัดเชียงใหม่เป็นจังหวัดสำคัญของภาคเหนือ
+            มีแหล่งท่องเที่ยวทางธรรมชาติ วัฒนธรรม และวิถีชีวิต
+            รวมถึงมีร้านอาหารและที่พักหลากหลายรูปแบบ
+            เหมาะสำหรับนักท่องเที่ยวที่ต้องการเดินทางมาพักผ่อน
+            และสัมผัสบรรยากาศของเมืองล้านนา
+        </p>
+
+        <p>
+            เว็บไซต์หน้านี้รวบรวมร้านอาหารที่น่าสนใจจำนวน 5 แห่ง
+            และที่พักจำนวน 4 แห่งในจังหวัดเชียงใหม่
+            พร้อมลิงก์ Facebook หรือ Instagram
+            เพื่อให้สามารถติดตามข่าวสาร โปรโมชั่น
+            และข้อมูลการให้บริการล่าสุดได้
+        </p>
+
+    </section>
+
+
+    <!-- ==================== ร้านอาหาร ==================== -->
+
+    <section class="content-box" id="food">
+
+        <h2>🍜 ร้านอาหารในจังหวัดเชียงใหม่</h2>
+
+        <p>
+            เชียงใหม่มีอาหารที่มีเอกลักษณ์ของภาคเหนือ
+            ทั้งอาหารพื้นเมือง อาหารไทย และอาหารรูปแบบร่วมสมัย
+            โดยร้านอาหารแต่ละแห่งมีบรรยากาศและเมนูที่แตกต่างกัน
+        </p>
+
+
+        <!-- ร้านที่ 1 -->
+        <div class="place-card">
+
+            <h3>1. ข้าวซอยคุณยาย</h3>
+
+            <p>
+                ร้านข้าวซอยที่นำเสนออาหารเหนือแบบเรียบง่าย
+                โดยเมนูเด่นคือข้าวซอย ซึ่งเป็นอาหารขึ้นชื่อของเชียงใหม่
+                น้ำแกงมีรสเข้มข้นและมีกลิ่นหอมของเครื่องแกง
+                เหมาะสำหรับผู้ที่ต้องการลองรับประทานอาหารพื้นเมือง
+            </p>
+
+            <p>
+                <b>ประเภทอาหาร:</b> อาหารเหนือ / ข้าวซอย
+            </p>
+
+            <p>
+                <b>พื้นที่:</b> อำเภอเมืองเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/pages/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A7%E0%B8%8B%E0%B8%AD%E0%B8%A2%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A2%E0%B8%B2%E0%B8%A2/117308398335204"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+        </div>
+
+
+        <!-- ร้านที่ 2 -->
+        <div class="place-card">
+
+            <h3>2. เฮือนม่วนใจ๋</h3>
+
+            <p>
+                ร้านอาหารเหนือที่มีบรรยากาศแบบบ้านล้านนา
+                ให้บริการอาหารพื้นเมืองหลากหลายชนิด
+                เช่น ไส้อั่ว น้ำพริกหนุ่ม และอาหารเหนือแบบดั้งเดิม
+                เหมาะสำหรับผู้ที่ต้องการสัมผัสรสชาติอาหารล้านนา
+            </p>
+
+            <p>
+                <b>ประเภทอาหาร:</b> อาหารเหนือ / อาหารพื้นเมือง
+            </p>
+
+            <p>
+                <b>พื้นที่:</b> ตำบลช้างเผือก อำเภอเมืองเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/p/Huen-Muan-Jai-%E0%B9%80%E0%B8%AE%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B9%83%E0%B8%88%E0%B9%8B-100064520838920/"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+        </div>
+
+
+        <!-- ร้านที่ 3 -->
+        <div class="place-card">
+
+            <h3>3. ต๋องเต็มโต๊ะ</h3>
+
+            <p>
+                ร้านอาหารเหนือยอดนิยมในย่านนิมมานเหมินท์
+                มีเมนูอาหารพื้นเมืองหลากหลายให้เลือก
+                โดยแนวคิดของร้านเน้นการเสิร์ฟอาหารหลายชนิด
+                เพื่อให้สามารถรับประทานร่วมกันได้หลายคน
+            </p>
+
+            <p>
+                <b>ประเภทอาหาร:</b> อาหารเหนือ / อาหารพื้นเมือง
+            </p>
+
+            <p>
+                <b>พื้นที่:</b> ถนนนิมมานเหมินท์ อำเภอเมืองเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/TongTemToh/"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+        </div>
+
+
+        <!-- ร้านที่ 4 -->
+        <div class="place-card">
+
+            <h3>4. SP Chicken (ไก่ย่างเอสพี)</h3>
+
+            <p>
+                ร้านอาหารที่มีเมนูไก่ย่างเป็นเมนูเด่น
+                เป็นอีกหนึ่งร้านที่นักท่องเที่ยวสามารถแวะมารับประทาน
+                อาหารไทยและอาหารพื้นเมืองในบริเวณเมืองเก่าเชียงใหม่
+            </p>
+
+            <p>
+                <b>ประเภทอาหาร:</b> อาหารไทย / ไก่ย่าง
+            </p>
+
+            <p>
+                <b>พื้นที่:</b> ตำบลพระสิงห์ อำเภอเมืองเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/profile.php?id=100057533616568"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+        </div>
+
+
+        <!-- ร้านที่ 5 -->
+        <div class="place-card">
+
+            <h3>5. Ginger Farm Kitchen</h3>
+
+            <p>
+                ร้านอาหารที่นำวัตถุดิบจากท้องถิ่นมาประยุกต์
+                เป็นอาหารไทยและอาหารเหนือในรูปแบบร่วมสมัย
+                แนวคิดของร้านเชื่อมโยงอาหารเข้ากับวัตถุดิบจากฟาร์ม
+                และให้ความสำคัญกับผักและวัตถุดิบท้องถิ่น
+            </p>
+
+            <p>
+                <b>ประเภทอาหาร:</b> อาหารไทย / อาหารเหนือ / อาหารจากวัตถุดิบท้องถิ่น
+            </p>
+
+            <p>
+                <b>สถานที่:</b> One Nimman ถนนนิมมานเหมินท์
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/gingerfarmkitchen/"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/gingerfarm_kitchen/"
+               target="_blank">
+                ติดตาม Instagram
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== ที่พัก ==================== -->
+
+    <section class="content-box" id="hotel">
+
+        <h2>🏨 ที่พักในจังหวัดเชียงใหม่</h2>
+
+        <p>
+            จังหวัดเชียงใหม่มีที่พักหลากหลายรูปแบบ
+            ตั้งแต่โรงแรมในเขตเมืองเก่า โรงแรมบูติก
+            ไปจนถึงรีสอร์ตที่อยู่ท่ามกลางธรรมชาติ
+            โดยด้านล่างเป็นตัวอย่างที่พักจำนวน 4 แห่ง
+        </p>
+
+
+        <!-- ที่พัก 1 -->
+        <div class="place-card">
+
+            <h3>1. Tamarind Village Chiang Mai</h3>
+
+            <p>
+                โรงแรมบูติกที่ตั้งอยู่ในบริเวณเมืองเก่าของเชียงใหม่
+                มีบรรยากาศที่ผสมผสานความเป็นล้านนา
+                เข้ากับการออกแบบที่เรียบง่ายและร่วมสมัย
+                ที่พักตั้งอยู่บริเวณถนนราชดำเนิน
+                ทำให้สามารถเดินทางไปยังสถานที่สำคัญในเมืองเก่าได้สะดวก
+            </p>
+
+            <p>
+                <b>ประเภท:</b> โรงแรมบูติก
+            </p>
+
+            <p>
+                <b>ที่ตั้ง:</b> ถนนราชดำเนิน อำเภอเมืองเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/tamarindvillagechiangmai"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/tamarindvillagechiangmai/"
+               target="_blank">
+                ติดตาม Instagram
+            </a>
+
+        </div>
+
+
+        <!-- ที่พัก 2 -->
+        <div class="place-card">
+
+            <h3>2. Raya Heritage</h3>
+
+            <p>
+                ที่พักที่ตั้งอยู่ใกล้แม่น้ำปิงในจังหวัดเชียงใหม่
+                มีบรรยากาศเงียบสงบและรายล้อมด้วยพื้นที่สีเขียว
+                การออกแบบได้รับแรงบันดาลใจจากงานหัตถกรรม
+                และวัฒนธรรมล้านนา เหมาะสำหรับผู้ที่ต้องการพักผ่อน
+                ในบรรยากาศที่เป็นส่วนตัว
+            </p>
+
+            <p>
+                <b>ประเภท:</b> รีสอร์ต / โรงแรมบูติก
+            </p>
+
+            <p>
+                <b>ที่ตั้ง:</b> ตำบลดอนแก้ว อำเภอแม่ริม จังหวัดเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/RayaHeritage"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/rayaheritage/"
+               target="_blank">
+                ติดตาม Instagram
+            </a>
+
+        </div>
+
+
+        <!-- ที่พัก 3 -->
+        <div class="place-card">
+
+            <h3>3. 137 Pillars House Chiang Mai</h3>
+
+            <p>
+                โรงแรมบูติกที่มีเอกลักษณ์ด้านสถาปัตยกรรม
+                และประวัติศาสตร์ โดยตัวอาคารได้รับการบูรณะ
+                ให้คงเสน่ห์ของเรือนไม้ในอดีตไว้
+                พร้อมสิ่งอำนวยความสะดวกสำหรับผู้เข้าพัก
+            </p>
+
+            <p>
+                <b>ประเภท:</b> โรงแรมบูติก
+            </p>
+
+            <p>
+                <b>ที่ตั้ง:</b> ถนนนวรัฐ อำเภอเมืองเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.instagram.com/137pillarshouse/"
+               target="_blank">
+                ติดตาม Instagram
+            </a>
+
+            <a class="social-link"
+               href="https://137pillarshotels.com/en/chiangmai/"
+               target="_blank">
+                เว็บไซต์โรงแรม
+            </a>
+
+        </div>
+
+
+        <!-- ที่พัก 4 -->
+        <div class="place-card">
+
+            <h3>4. U Nimman Chiang Mai</h3>
+
+            <p>
+                โรงแรมที่ตั้งอยู่บริเวณย่านนิมมานเหมินท์
+                ซึ่งเป็นย่านที่มีร้านอาหาร คาเฟ่ ร้านค้า
+                และสถานที่ท่องเที่ยวจำนวนมาก
+                จึงเหมาะสำหรับผู้ที่ต้องการพักในบริเวณที่เดินทางสะดวก
+                และอยู่ใกล้แหล่งท่องเที่ยวและแหล่งช้อปปิ้ง
+            </p>
+
+            <p>
+                <b>ประเภท:</b> โรงแรมในเมือง
+            </p>
+
+            <p>
+                <b>ที่ตั้ง:</b> ถนนนิมมานเหมินท์ จังหวัดเชียงใหม่
+            </p>
+
+            <a class="social-link"
+               href="https://www.facebook.com/UNimman"
+               target="_blank">
+                ติดตาม Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/unimmanchiangmai/"
+               target="_blank">
+                ติดตาม Instagram
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================== แหล่งข้อมูล ==================== -->
+
+    <section class="content-box" id="source">
+
+        <h2>📌 แหล่งข้อมูลและช่องทางติดตาม</h2>
+
+        <p>
+            ข้อมูลร้านอาหารและที่พักจัดทำขึ้นเพื่อใช้เป็นข้อมูลประกอบ
+            เว็บไซต์จังหวัดเชียงใหม่ โดยควรตรวจสอบข้อมูลล่าสุด
+            เช่น เวลาเปิด-ปิด ราคา โปรโมชั่น และเงื่อนไขการให้บริการ
+            จากช่องทางของร้านหรือที่พักก่อนเดินทาง
+        </p>
+
+
+        <div class="source">
+
+            <h3>ร้านอาหาร</h3>
+
+            <p>
+                <b>ข้าวซอยคุณยาย:</b>
+                Facebook
+            </p>
+
+            <p>
+                <b>เฮือนม่วนใจ๋:</b>
+                Facebook
+            </p>
+
+            <p>
+                <b>ต๋องเต็มโต๊ะ:</b>
+                Facebook
+            </p>
+
+            <p>
+                <b>SP Chicken:</b>
+                Facebook
+            </p>
+
+            <p>
+                <b>Ginger Farm Kitchen:</b>
+                Facebook / Instagram
+            </p>
+
+        </div>
+
+
+        <div class="source">
+
+            <h3>ที่พัก</h3>
+
+            <p>
+                <b>Tamarind Village:</b>
+                Facebook / Instagram
+            </p>
+
+            <p>
+                <b>Raya Heritage:</b>
+                Facebook / Instagram
+            </p>
+
+            <p>
+                <b>137 Pillars House:</b>
+                Instagram / เว็บไซต์โรงแรม
+            </p>
+
+            <p>
+                <b>U Nimman:</b>
+                Facebook / Instagram
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ท้ายเว็บไซต์ -->
+<footer>
+
+    <p><b>เว็บไซต์เพื่อการทดลอง</b></p>
+
+    <p>
+        ร้านอาหารและที่พัก จังหวัดเชียงใหม่
+    </p>
+
+    <p>
+        © 2026 Chiang Mai Travel Website
+    </p>
+
+</foo   gffhggggg      ter>
+
+</body>
+</html>
