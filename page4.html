@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> เว็บไซต์เพื่อการทดลอง - ท่องเที่ยว ณ เชียงใหม่</title>
+
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Tahoma", "Arial", sans-serif;
+        background: #f3eee6;
+        color: #333;
+        line-height: 1.8;
+    }
+
+    /* หัวเว็บไซต์ */
+    header {
+        background: linear-gradient(rgba(49, 92, 76, 0.8), rgba(95, 128, 104, 0.7)), url('watermarked_img_6779758179094076967.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 60px 20px 50px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 40px;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+        margin: 8px 0 0;
+        font-size: 17px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* เมนู */
+    nav {
+        background: #ffffff;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #315c4c;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: #315c4c;
+        color: white;
+    }
+
+    /* รูปภาพในเนื้อหา */
+    .section-img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* เนื้อหา */
+    main {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .content-box {
+        background: white;
+        margin-bottom: 25px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .content-box h2 {
+        color: #315c4c;
+        border-left: 6px solid #d29b55;
+        padding-left: 15px;
+        margin-top: 0;
+    }
+
+    .content-box h3 {
+        color: #5f8068;
+        margin-bottom: 5px;
+    }
+
+    .districts {
+        columns: 2;
+        column-gap: 40px;
+    }
+
+    /* แบบฟอร์ม */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        color: #315c4c;
+        margin-bottom: 7px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: "Tahoma", "Arial", sans-serif;
+        font-size: 15px;
+    }
+
+    textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    input[type="submit"] {
+        background: #315c4c;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background: #d29b55;
+    }
+
+    .comment-box {
+        background: #f8f5ef;
+        padding: 18px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border-left: 5px solid #d29b55;
+    }
+
+    /* ท้ายเว็บไซต์ */
+    footer {
+        margin-top: 40px;
+        background: #315c4c;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+
+    /* สำหรับโทรศัพท์ */
+    @media (max-width: 700px) {
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        .content-box {
+            padding: 20px;
+        }
+
+        .districts {
+            columns: 1;
+        }
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+<!-- หัวเว็บไซต์ -->
+<header>
+    <h1>ท่องเที่ยว ณ เชียงใหม่</h1>
+    <p>เว็บไซต์เพื่อการทดลอง | ข้อมูลจังหวัดเชียงใหม่</p>
+</header>
+
+
+ <!-- เมนูเว็บไซต์ -->
+    <nav>
+        <ul>
+            <li><a href="https://pakornkiad12.github.io/yak.ren.minecraft/">หน้าแรก</a></li>
+            <li><a href="page.html">ท่องเที่ยว</a></li>
+            <li><a href="page2.html">อาหาร/ที่พัก</a></li>
+            <li><a href="page3.html">ข่าวสาร</a></li>
+            <li><a href="page4.html">แกลลอรี่</a></li>
+            <li><a href="page5.html">ผู้จัดทำ</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+<!-- เนื้อหาเว็บไซต์ -->
+<main>
+
+    <!-- ส่วนอัปโหลดรูปภาพ -->
+    <section class="content-box">
+
+        <h2>อัปโหลดรูปภาพจังหวัดเชียงใหม่</h2>
+
+        <p>
+            ร่วมแบ่งปันภาพความประทับใจจากการท่องเที่ยว
+            ในจังหวัดเชียงใหม่ ไม่ว่าจะเป็นสถานที่ท่องเที่ยว
+            ธรรมชาติ อาหาร วัฒนธรรม หรือกิจกรรมต่าง ๆ
+        </p>
+
+        <form>
+
+            <div class="form-group">
+                <label for="name">ชื่อผู้ส่งรูปภาพ</label>
+
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="กรุณากรอกชื่อ">
+            </div>
+
+            <div class="form-group">
+                <label for="photo">เลือกรูปภาพ</label>
+
+                <input type="file"
+                       id="photo"
+                       name="photo"
+                       accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="description">คำอธิบายรูปภาพ</label>
+
+                <textarea id="description"
+                          name="description"
+                          placeholder="เขียนคำอธิบายเกี่ยวกับรูปภาพ เช่น สถานที่หรือกิจกรรม"></textarea>
+            </div>
+
+            <input type="submit"
+                   value="อัปโหลดรูปภาพ">
+
+        </form>
+
+    </section>
+
+
+    <!-- ส่วนแสดงความคิดเห็น -->
+    <section class="content-box">
+
+        <h2>แสดงความคิดเห็น</h2>
+
+        <p>
+            สามารถแสดงความคิดเห็นเกี่ยวกับเว็บไซต์
+            สถานที่ท่องเที่ยว หรือประสบการณ์การเดินทาง
+            ในจังหวัดเชียงใหม่ได้
+        </p>
+
+        <form>
+
+            <div class="form-group">
+                <label for="comment-name">ชื่อผู้แสดงความคิดเห็น</label>
+
+                <input type="text"
+                       id="comment-name"
+                       name="comment-name"
+                       placeholder="กรุณากรอกชื่อ">
+            </div>
+
+            <div class="form-group">
+                <label for="comment">ความคิดเห็น</label>
+
+                <textarea id="comment"
+                          name="comment"
+                          placeholder="กรุณาเขียนความคิดเห็นของคุณ"></textarea>
+            </div>
+
+            <input type="submit"
+                   value="ส่งความคิดเห็น">
+
+        </form>
+
+    </section>
+
+
+    <!-- ตัวอย่างความคิดเห็น -->
+    <section class="content-box">
+
+        <h2>ความคิดเห็นจากผู้เข้าชมเว็บไซต์</h2>
+
+        <div class="comment-box">
+
+            <h3>ตัวอย่างความคิดเห็นที่ 1</h3>
+
+            <p>
+                เว็บไซต์มีข้อมูลสถานที่ท่องเที่ยวเชียงใหม่
+                ที่น่าสนใจและอ่านง่าย
+            </p>
+
+        </div>
+
+
+        <div class="comment-box">
+
+            <h3>ตัวอย่างความคิดเห็นที่ 2</h3>
+
+            <p>
+                ชอบส่วนที่สามารถแบ่งปันรูปภาพ
+                และแสดงความคิดเห็นเกี่ยวกับเชียงใหม่ได้
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ข้อมูลเพิ่มเติม -->
+    <section class="content-box">
+
+        <h2>ร่วมแบ่งปันประสบการณ์</h2>
+
+        <p>
+            รูปภาพและความคิดเห็นจากผู้เข้าชมเว็บไซต์
+            สามารถช่วยให้ผู้ที่สนใจเดินทางมาเชียงใหม่
+            ได้เห็นมุมมองและประสบการณ์จากผู้ใช้งานจริง
+        </p>
+
+        <p>
+            กรุณาใช้ข้อความที่สุภาพและไม่เผยแพร่ข้อมูลส่วนตัว
+            ของผู้อื่นโดยไม่ได้รับอนุญาต
+        </p>
+
+    </section>
+
+</main>
+
+<!-- ท้ายเว็บไซต์ -->
+<footer>
+    <p><b>เว็บไซต์เพื่อการทดลอง</b></p>
+    <p>ท่องเที่ยว ณ เชียงใหม่</p>
+    <p>© 2026 Chiang Mai Travel Website</p>
+</footer>
+
+
+</body>
+</html>
