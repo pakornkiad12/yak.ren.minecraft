@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> เว็บไซต์เพื่อการทดลอง - ท่องเที่ยว ณ เชียงใหม่</title>
+
+```
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: "Tahoma", "Arial", sans-serif;
+        background: #f3eee6;
+        color: #333;
+        line-height: 1.8;
+    }
+
+    /* หัวเว็บไซต์ */
+    header {
+        background: linear-gradient(rgba(49, 92, 76, 0.8), rgba(95, 128, 104, 0.7)), url('watermarked_img_6779758179094076967.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 60px 20px 50px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 40px;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+        margin: 8px 0 0;
+        font-size: 17px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* เมนู */
+    nav {
+        background: #ffffff;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #315c4c;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: #315c4c;
+        color: white;
+    }
+
+    /* รูปภาพในเนื้อหา */
+    .section-img {
+        width: 100%;
+        max-height: 350px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* เนื้อหา */
+    main {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .content-box {
+        background: white;
+        margin-bottom: 25px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .content-box h2 {
+        color: #315c4c;
+        border-left: 6px solid #d29b55;
+        padding-left: 15px;
+        margin-top: 0;
+    }
+
+    .content-box h3 {
+        color: #5f8068;
+        margin-bottom: 5px;
+    }
+
+    .districts {
+        columns: 2;
+        column-gap: 40px;
+    }
+
+    /* ปุ่มติดตาม */
+    .follow-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background: #315c4c;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    .follow-link:hover {
+        background: #d29b55;
+    }
+
+    /* ท้ายเว็บไซต์ */
+    footer {
+        margin-top: 40px;
+        background: #315c4c;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+
+    /* สำหรับโทรศัพท์ */
+    @media (max-width: 700px) {
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        .content-box {
+            padding: 20px;
+        }
+
+        .districts {
+            columns: 1;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- หัวเว็บไซต์ -->
+<header>
+    <h1>ท่องเที่ยว ณ เชียงใหม่</h1>
+    <p>เว็บไซต์เพื่อการทดลอง | ข้อมูลจังหวัดเชียงใหม่</p>
+</header>
+
+<!-- เมนูเว็บไซต์ -->
+<nav>
+    <ul>
+        <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">หน้าแรก</a></li>
+        <li><a href="https://www.japan.travel/th/th/" target="_blank">ท่องเที่ยว</a></li>
+        <li><a href="https://www.youtube.com/@CEOkung" target="_blank">อาหาร/ที่พัก</a></li>
+        <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">ข่าวสาร</a></li>
+        <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">แกลลอรี่</a></li>
+        <li><a href="https://www.youtube.com/@CEOkung" target="_blank">ผู้จัดทำ</a></li>
+    </ul>
+</nav>
+
+<br>
+
+<!-- เนื้อหาเว็บไซต์ -->
+<main>
+
+    <!-- ช่องทางข่าวสาร -->
+    <section class="content-box">
+
+        <h2>ช่องทางข่าวสารในจังหวัดเชียงใหม่</h2>
+
+        <img src="D:\งาน\imges\cm.jpg"
+             alt="ข่าวสารจังหวัดเชียงใหม่"
+             class="section-img">
+
+        <p>
+            จังหวัดเชียงใหม่มีช่องทางข่าวสารหลายรูปแบบ
+            ทั้งหน่วยงานราชการ สำนักข่าวท้องถิ่น
+            และสื่อออนไลน์ที่นำเสนอข่าวสารและกิจกรรมต่าง ๆ
+            เพื่อให้ประชาชนและนักท่องเที่ยวสามารถติดตามข้อมูล
+            ที่เกิดขึ้นในจังหวัดเชียงใหม่ได้สะดวก
+        </p>
+
+        <p>
+            ด้านล่างเป็นตัวอย่างช่องทางข่าวสารจำนวน 5 ช่องทาง
+            พร้อมลิงก์ Facebook หรือ Instagram
+            สำหรับติดตามข่าวสารและข้อมูลอัปเดต
+        </p>
+
+    </section>
+
+
+    <!-- ช่องทางที่ 1 -->
+    <section class="content-box">
+
+        <h2>1. สำนักงานประชาสัมพันธ์จังหวัดเชียงใหม่</h2>
+
+        <p>
+            สำนักงานประชาสัมพันธ์จังหวัดเชียงใหม่
+            เป็นหน่วยงานที่เผยแพร่ข่าวประชาสัมพันธ์
+            ข่าวสารของจังหวัด กิจกรรมของหน่วยงานราชการ
+            รวมถึงข้อมูลที่เป็นประโยชน์ต่อประชาชน
+        </p>
+
+        <p>
+            เหมาะสำหรับติดตามข่าวสารจากหน่วยงานภาครัฐ
+            ประกาศ กิจกรรม และข้อมูลสำคัญของจังหวัดเชียงใหม่
+        </p>
+
+        <p>
+            <b>ประเภทข่าว:</b>
+            ข่าวราชการ ข่าวประชาสัมพันธ์ และกิจกรรมจังหวัด
+        </p>
+
+        <a class="follow-link"
+           href="https://www.facebook.com/prchiangmai"
+           target="_blank">
+            ติดตาม Facebook
+        </a>
+
+    </section>
+
+
+    <!-- ช่องทางที่ 2 -->
+    <section class="content-box">
+
+        <h2>2. เชียงใหม่ CM108 ข่าวเชียงใหม่</h2>
+
+        <p>
+            CM108 เป็นสื่อข่าวออนไลน์ที่นำเสนอข่าวสาร
+            และเหตุการณ์ต่าง ๆ ในจังหวัดเชียงใหม่
+            รวมถึงข่าวในพื้นที่ภาคเหนือ
+        </p>
+
+        <p>
+            สามารถติดตามข่าวสารที่เกี่ยวข้องกับเหตุการณ์
+            สภาพการจราจร กิจกรรม และเรื่องราวที่เกิดขึ้น
+            ในจังหวัดเชียงใหม่ได้
+        </p>
+
+        <p>
+            <b>ประเภทข่าว:</b>
+            ข่าวท้องถิ่น เหตุการณ์ และข่าวสารประจำวัน
+        </p>
+
+        <a class="follow-link"
+           href="https://www.facebook.com/CM108"
+           target="_blank">
+            ติดตาม Facebook
+        </a>
+
+    </section>
+
+
+    <!-- ช่องทางที่ 3 -->
+    <section class="content-box">
+
+        <h2>3. Chiang Mai Citylife</h2>
+
+        <p>
+            Chiang Mai Citylife เป็นสื่อที่นำเสนอข้อมูล
+            ข่าวสาร และเรื่องราวเกี่ยวกับจังหวัดเชียงใหม่
+            โดยมีเนื้อหาเกี่ยวกับชุมชน การท่องเที่ยว
+            กิจกรรม สังคม และสถานที่ต่าง ๆ
+        </p>
+
+        <p>
+            เหมาะสำหรับผู้ที่ต้องการติดตามข่าวสารเชียงใหม่
+            โดยเฉพาะข้อมูลเกี่ยวกับกิจกรรมและเรื่องราว
+            ที่เกิดขึ้นในเมืองเชียงใหม่
+        </p>
+
+        <p>
+            <b>ประเภทข่าว:</b>
+            ข่าวเมืองเชียงใหม่ กิจกรรม สังคม และการท่องเที่ยว
+        </p>
+
+        <a class="follow-link"
+           href="https://www.facebook.com/CitylifeChiangMai"
+           target="_blank">
+            ติดตาม Facebook
+        </a>
+
+    </section>
+
+
+    <!-- ช่องทางที่ 4 -->
+    <section class="content-box">
+
+        <h2>4. องค์การบริหารส่วนจังหวัดเชียงใหม่</h2>
+
+        <p>
+            องค์การบริหารส่วนจังหวัดเชียงใหม่ หรือ อบจ.เชียงใหม่
+            เป็นหน่วยงานปกครองส่วนท้องถิ่นที่มีการเผยแพร่
+            ข่าวประชาสัมพันธ์ กิจกรรม โครงการ
+            และข้อมูลการดำเนินงานต่าง ๆ ของจังหวัด
+        </p>
+
+        <p>
+            ช่องทางนี้เหมาะสำหรับติดตามข้อมูลเกี่ยวกับ
+            โครงการ กิจกรรม และการประชาสัมพันธ์จาก
+            องค์การบริหารส่วนจังหวัดเชียงใหม่
+        </p>
+
+        <p>
+            <b>ประเภทข่าว:</b>
+            ข่าวประชาสัมพันธ์ กิจกรรม และโครงการของ อบจ.
+        </p>
+
+        <a class="follow-link"
+           href="https://www.facebook.com/cmpao888"
+           target="_blank">
+            ติดตาม Facebook
+        </a>
+
+    </section>
+
+
+    <!-- ช่องทางที่ 5 -->
+    <section class="content-box">
+
+        <h2>5. เชียงใหม่นิวส์ Chiang Mai News</h2>
+
+        <p>
+            เชียงใหม่นิวส์เป็นสื่อข่าวที่นำเสนอข่าวสาร
+            ในจังหวัดเชียงใหม่และพื้นที่ภาคเหนือ
+            โดยมีเนื้อหาข่าวหลายประเภท
+            เพื่อให้ผู้ติดตามสามารถรับข้อมูลข่าวสาร
+            ที่เกิดขึ้นในพื้นที่ได้อย่างรวดเร็ว
+        </p>
+
+        <p>
+            สามารถติดตามข่าวสารผ่านช่องทางออนไลน์
+            โดยเฉพาะ Facebook และ Instagram
+            เพื่อรับข้อมูลข่าวสารและเรื่องราวใหม่ ๆ
+        </p>
+
+        <p>
+            <b>ประเภทข่าว:</b>
+            ข่าวท้องถิ่น ข่าวภาคเหนือ และข่าวประจำวัน
+        </p>
+
+        <a class="follow-link"
+           href="https://www.facebook.com/chiangmainews"
+           target="_blank">
+            ติดตาม Facebook
+        </a>
+
+        <a class="follow-link"
+           href="https://www.instagram.com/chiangmainews/"
+           target="_blank">
+            ติดตาม Instagram
+        </a>
+
+    </section>
+
+
+    <!-- แหล่งที่มา -->
+    <section class="content-box">
+
+        <h2>ที่มา</h2>
+
+        <p>
+            ข้อมูลช่องทางข่าวสารอ้างอิงจากเว็บไซต์
+            และช่องทางโซเชียลมีเดียของหน่วยงานหรือสำนักข่าว
+            เพื่อให้ผู้เข้าชมสามารถเข้าไปติดตามข้อมูลข่าวสาร
+            ที่มีการอัปเดตเพิ่มเติมได้
+        </p>
+
+        <p>
+            <b>สำนักงานประชาสัมพันธ์จังหวัดเชียงใหม่</b><br>
+            <a href="https://chiangmai.prd.go.th/"
+               target="_blank">
+                เว็บไซต์สำนักงานประชาสัมพันธ์จังหวัดเชียงใหม่
+            </a>
+        </p>
+
+        <p>
+            <b>Chiang Mai Citylife</b><br>
+            <a href="https://www.chiangmaicitylife.com/"
+               target="_blank">
+                เว็บไซต์ Chiang Mai Citylife
+            </a>
+        </p>
+
+        <p>
+            <b>องค์การบริหารส่วนจังหวัดเชียงใหม่</b><br>
+            <a href="https://www.chiangmaipao.go.th/"
+               target="_blank">
+                เว็บไซต์ อบจ.เชียงใหม่
+            </a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- ท้ายเว็บไซต์ -->
+<footer>
+
+    <p><b>เว็บไซต์เพื่อการทดลอง</b></p>
+
+    <p>ท่องเที่ยว ณ เชียงใหม่</p>
+
+    <p>© 2026 Chiang Mai Travel Website</p>
+
+</footer>
+```
+
+</body>
+</html>
