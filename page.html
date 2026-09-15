@@ -1,0 +1,973 @@
+﻿<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>เว็บไซต์ว ณ เชียงใหม่</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Tahoma, Arial, sans-serif;
+        background: #eee7dc;
+        color: #333;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       ส่วนหัวเว็บไซต์
+    ========================= */
+
+    header {
+        background: linear-gradient(135deg, #315c4c, #6f9077);
+        color: white;
+        text-align: center;
+        padding: 40px 20px 30px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 42px;
+    }
+
+    header p {
+        margin: 5px 0 0;
+        font-size: 17px;
+    }
+
+
+    /* =========================
+       เมนูด้านบน
+    ========================= */
+
+    nav {
+        background: white;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        display: block;
+        padding: 14px 22px;
+        color: #315c4c;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: #315c4c;
+        color: white;
+    }
+
+
+    /* =========================
+       รูปภาพด้านบน
+    ========================= */
+
+    .hero {
+        text-align: center;
+        padding: 35px 20px;
+    }
+
+    .hero img {
+        width: 500px;
+        max-width: 90%;
+        height: auto;
+        border-radius: 22px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        border: 6px solid white;
+    }
+
+
+    /* =========================
+       พื้นที่เนื้อหา
+    ========================= */
+
+    main {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+    }
+
+
+    /* กล่องแต่ละหมวด */
+
+    .category {
+        background: white;
+        margin-bottom: 35px;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    }
+
+
+    /* หัวข้อหมวด */
+
+    .category-title {
+        color: #315c4c;
+        text-align: center;
+        font-size: 28px;
+        margin-top: 0;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid #d5a45c;
+    }
+
+
+    /* =========================
+       การ์ดสถานที่
+    ========================= */
+
+    .places {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .place {
+        background: #faf8f3;
+        border-radius: 14px;
+        padding: 20px;
+        border-left: 5px solid #6f9077;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .place:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 7px 18px rgba(0,0,0,0.15);
+    }
+
+    .place h3 {
+        color: #315c4c;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    .place p {
+        margin-top: 0;
+    }
+
+
+    /* ปุ่มอ่านข้อมูล */
+
+    .button {
+        display: inline-block;
+        background: #315c4c;
+        color: white;
+        text-decoration: none;
+        padding: 7px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background: #d29b55;
+        color: white;
+    }
+
+
+    /* =========================
+       แหล่งที่มา
+    ========================= */
+
+    .source {
+        background: white;
+        margin-bottom: 40px;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+    }
+
+    .source h2 {
+        text-align: center;
+        color: #315c4c;
+        border-bottom: 3px solid #d5a45c;
+        padding-bottom: 12px;
+    }
+
+    .source p {
+        background: #faf8f3;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+
+    .source a {
+        color: #315c4c;
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+        background: #315c4c;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+
+
+    /* =========================
+       โทรศัพท์
+    ========================= */
+
+    @media (max-width: 700px) {
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        .places {
+            grid-template-columns: 1fr;
+        }
+
+        .category,
+        .source {
+            padding: 20px;
+        }
+
+        .category-title {
+            font-size: 23px;
+        }
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- หัวเว็บไซต์ -->
+    <header>
+        <h1>ท่องเที่ยว ณ เชียงใหม่</h1>
+        <p>เว็บไซต์เพื่อการทดลอง | ข้อมูลจังหวัดเชียงใหม่</p>
+    </header>
+
+
+   <!-- เมนูเว็บไซต์ -->
+    <nav>
+        <ul>
+            <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">หน้าแรก</a></li>
+            <li><a href="https://www.japan.travel/th/th/" target="_blank">ท่องเที่ยว</a></li>
+            <li><a href="https://www.youtube.com/@CEOkung" target="_blank">อาหาร/ที่พัก</a></li>
+            <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">ข่าวสาร</a></li>
+            <li><a href="file:///D:/pakornkaid%2012%2062/work3_punkorn_.html">แกลลอรี่</a></li>
+            <li><a href="https://www.youtube.com/@CEOkung" target="_blank">ผู้จัดทำ</a></li>
+        </ul>
+    </nav>
+
+    <br>
+
+
+</nav>
+
+<!-- =========================
+     HERO IMAGE
+========================= -->
+
+
+<main>
+
+<!-- =========================
+     สถานที่เที่ยวยอดฮิต
+========================= -->
+
+<section class="category">
+
+
+<h2 class="category-title">
+    🌿 สถานที่เที่ยวยอดฮิต
+</h2>
+
+<div class="places">
+
+
+    <div class="place">
+
+        <h3>ดอยสุเทพ</h3>
+
+        <p>
+            ตั้งอยู่ในอำเภอเมืองเชียงใหม่
+            เป็นสถานที่ท่องเที่ยวสำคัญของจังหวัด
+            มีจุดชมวิวเมืองเชียงใหม่และเป็นที่ตั้งของ
+            วัดพระธาตุดอยสุเทพ
+        </p>
+
+        <a class="button"
+           href="https://web.facebook.com/Doisutheppui/about?locale=th_TH____"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+
+    </div>
+
+
+    <div class="place">
+
+        <h3>ม่อนแจ่ม</h3>
+
+        <p>
+            ตั้งอยู่ในอำเภอแม่ริม
+            เป็นแหล่งท่องเที่ยวบนภูเขาที่มีอากาศเย็น
+            มีจุดชมวิวและทิวทัศน์ของภูเขาที่สวยงาม
+        </p>
+
+        <a class="button"
+           href="https://web.facebook.com/pages/@%E0%B8%A1%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%88%E0%B9%88%E0%B8%A1%20Mon%20Jam/913929728749762/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+
+    </div>
+
+
+    <div class="place">
+
+        <h3>บ้านแม่กำปอง</h3>
+
+        <p>
+            ตั้งอยู่ในอำเภอแม่ออน
+            เป็นหมู่บ้านท่ามกลางภูเขาและธรรมชาติ
+            มีลำธาร บ้านพักแบบโฮมสเตย์
+            และวิถีชีวิตชุมชน
+        </p>
+
+        <a class="button"
+           href="https://web.facebook.com/doikampong/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+
+    </div>
+
+
+    <div class="place">
+
+        <h3>ดอยอ่างขาง</h3>
+
+        <p>
+            ตั้งอยู่ในอำเภอฝาง
+            เป็นแหล่งท่องเที่ยวบนภูเขาที่มีอากาศเย็น
+            และเป็นที่ตั้งของสถานีเกษตรหลวงอ่างขาง
+        </p>
+
+        <a class="button"
+           href="https://web.facebook.com/groups/teeneeangkhang/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+
+    </div>
+
+
+    <div class="place">
+
+        <h3>ประตูท่าแพ</h3>
+
+        <p>
+            ตั้งอยู่ในเขตเมืองเก่าเชียงใหม่
+            เป็นสถานที่สำคัญทางประวัติศาสตร์
+            และเป็นจุดถ่ายภาพยอดนิยม
+        </p>
+
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B9%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%9E%20%E0%B8%88.%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%20Tha%20Phae%20Gate/106048774217319/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+
+    </div>
+
+
+    <div class="place">
+
+        <h3>ถนนคนเดินท่าแพ</h3>
+
+        <p>
+            เป็นตลาดถนนคนเดินที่มีสินค้า
+            งานหัตถกรรม อาหารพื้นเมือง
+            และของที่ระลึก
+        </p>
+
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%84%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%9E/175466822627774/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     อุทยาน
+========================= -->
+
+<section class="category">
+
+
+<h2 class="category-title">
+           อุทยานและแหล่งธรรมชาติ
+</h2>
+
+<div class="places">
+
+
+    <div class="place">
+        <h3>อุทยานแห่งชาติดอยอินทนนท์</h3>
+        <p>
+            ตั้งอยู่ในอำเภอจอมทอง เป็นที่ตั้งของดอยอินทนนท์
+            ซึ่งเป็นยอดเขาที่สูงที่สุดของประเทศไทย
+            มีน้ำตกและเส้นทางศึกษาธรรมชาติ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/DoiInthanonNationalPark/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>อุทยานแห่งชาติออบขาน</h3>
+        <p>
+            เป็นพื้นที่ธรรมชาติที่มีภูเขา หน้าผา หุบเขา
+            และลำน้ำ เหมาะสำหรับการท่องเที่ยวเชิงธรรมชาติ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/p/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%AD%E0%B8%AD%E0%B8%9A%E0%B8%82%E0%B8%B2%E0%B8%99-Ob-Khan-National-Park_New-100095082577237/?_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>อุทยานแห่งชาติศรีลานนา</h3>
+        <p>
+            มีพื้นที่ป่าและภูเขาที่อุดมสมบูรณ์
+            รวมถึงแหล่งน้ำและธรรมชาติที่สวยงาม
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/Srilanna888/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>อุทยานแห่งชาติแม่ตะไคร้</h3>
+        <p>
+            เป็นพื้นที่ป่าและภูเขาที่มีความสำคัญ
+            ต่อระบบต้นน้ำและทรัพยากรธรรมชาติ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/maetakhrai50220/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>อุทยานแห่งชาติแม่วาง</h3>
+        <p>
+            มีภูมิประเทศเป็นภูเขาและป่าไม้
+            เหมาะสำหรับการศึกษาธรรมชาติและพักผ่อน
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/maewang.nationalpark/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>กิ่วแม่ปาน</h3>
+        <p>
+            ตั้งอยู่บนดอยอินทนนท์
+            เป็นเส้นทางศึกษาธรรมชาติที่มีทิวทัศน์
+            ภูเขาและป่าไม้ที่สวยงาม
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%81%E0%B8%B4%E0%B9%88%E0%B8%A7%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9B%E0%B8%B2%E0%B8%99%20%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C/345745465546363/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>น้ำตกวชิรธาร</h3>
+        <p>
+            ตั้งอยู่ในพื้นที่ดอยอินทนนท์
+            เป็นน้ำตกขนาดใหญ่ที่มีความสวยงาม
+            และเป็นจุดท่องเที่ยวสำคัญ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%81%E0%B8%A7%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%A3/179431708847498/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>น้ำตกแม่ยะ</h3>
+        <p>
+            เป็นน้ำตกขนาดใหญ่ในพื้นที่อำเภอจอมทอง
+            มีธรรมชาติและป่าไม้โดยรอบ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/p/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%81%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%95%E0%B8%B5%E0%B9%8A%E0%B8%A2%E0%B8%B0-Mae-Tia-Waterfall-100034065057033/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     สถานที่ทางศาสนา
+========================= -->
+
+<section class="category">
+
+<h2 class="category-title">
+    🛕 สถานที่ทางศาสนา
+</h2>
+
+<div class="places">
+
+
+    <div class="place">
+        <h3>วัดพระธาตุดอยสุเทพราชวรวิหาร</h3>
+        <p>
+            เป็นวัดสำคัญคู่เมืองเชียงใหม่
+            ตั้งอยู่บนดอยสุเทพ และเป็นสถานที่
+            ประดิษฐานพระบรมสารีริกธาตุ
+        </p>
+        <a class="button"
+           href="hhttps://web.facebook.com/p/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%95%E0%B8%B8%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AA%E0%B8%B8%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3-Doi-Suthep-100064810353757/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดพระสิงห์วรมหาวิหาร</h3>
+        <p>
+            ตั้งอยู่ในเขตเมืองเก่าเชียงใหม่
+            เป็นวัดสำคัญทางประวัติศาสตร์
+            และศาสนาของจังหวัด
+        </p>
+        <a class="button"
+           href="https://https://web.facebook.com/p/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B4%E0%B8%87%E0%B8%AB%E0%B9%8C-%E0%B8%A7%E0%B8%A3%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%88%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-100076285556424/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดเจดีย์หลวงวรวิหาร</h3>
+        <p>
+            เป็นวัดเก่าแก่ในเขตเมืองเชียงใหม่
+            มีเจดีย์ขนาดใหญ่ที่เป็นโบราณสถานสำคัญ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/p/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%A7%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-Wat-Chedi-Luang-Chiang-Mai-100066349282997/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดเชียงมั่น</h3>
+        <p>
+            เป็นวัดเก่าแก่และมีความสำคัญ
+            ต่อประวัติศาสตร์การก่อตั้งเมืองเชียงใหม่
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/people/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99/100066952241775/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดพันเตา</h3>
+        <p>
+            มีวิหารไม้สักที่มีความสวยงาม
+            และเป็นตัวอย่างของสถาปัตยกรรมล้านนา
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/watpantao/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดอุโมงค์ สวนพุทธธรรม</h3>
+        <p>
+            เป็นวัดเก่าแก่ท่ามกลางธรรมชาติ
+            มีอุโมงค์โบราณและบรรยากาศสงบ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/Watumong.Chiangmai/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดสวนดอก</h3>
+        <p>
+            เป็นวัดสำคัญในจังหวัดเชียงใหม่
+            มีเจดีย์และกู่ที่เกี่ยวข้องกับราชวงศ์เชียงใหม่
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%94%E0%B8%AD%E0%B8%81%20%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%AD%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%20%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88/1579652745466272/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดพระธาตุดอยคำ</h3>
+        <p>
+            เป็นวัดเก่าแก่ที่ตั้งอยู่บนดอยคำ
+            มีพระธาตุและพระเจ้าทันใจ
+            ซึ่งเป็นที่เคารพสักการะ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/DoiKhamTemple/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดศรีสุพรรณ</h3>
+        <p>
+            มีชื่อเสียงด้านงานศิลปะเครื่องเงิน
+            และสถาปัตยกรรมล้านนา
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/thailandsilvertemple/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>วัดพระธาตุศรีจอมทองวรวิหาร</h3>
+        <p>
+            ตั้งอยู่ในอำเภอจอมทอง
+            เป็นวัดสำคัญทางพระพุทธศาสนา
+            ของจังหวัดเชียงใหม่
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/watchomtong/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     สถานที่ราชการ
+========================= -->
+
+<section class="category">
+
+
+<h2 class="category-title">
+           สถานที่ทางราชการและสถานที่สำคัญของรัฐ
+</h2>
+
+<div class="places">
+
+
+    <div class="place">
+        <h3>พระตำหนักภูพิงคราชนิเวศน์</h3>
+        <p>
+            ตั้งอยู่บนดอยสุเทพ เป็นพระตำหนักที่มีความสำคัญ
+            และมีสวนดอกไม้และพรรณไม้ที่สวยงาม
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%95%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A0%E0%B8%B9%E0%B8%9E%E0%B8%B4%E0%B8%87%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%A8%E0%B8%99%E0%B9%8C%20%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AA%E0%B8%B8%E0%B9%80%E0%B8%97%E0%B8%9E/373633432762088/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>อุทยานหลวงราชพฤกษ์</h3>
+        <p>
+            เป็นสถานที่จัดแสดงพรรณไม้และการจัดสวน
+            มีพื้นที่สำหรับเรียนรู้และพักผ่อน
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/rprp.cnx/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>สถานีเกษตรหลวงอินทนนท์</h3>
+        <p>
+            เป็นแหล่งศึกษาและพัฒนาด้านการเกษตรบนพื้นที่สูง
+            และเป็นแหล่งเรียนรู้เกี่ยวกับพืชเมืองหนาว
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/TheRoyalAgriculturalStationInthanon/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>สถานีเกษตรหลวงอ่างขาง</h3>
+        <p>
+            เป็นแหล่งศึกษาและพัฒนาการเกษตรบนพื้นที่สูง
+            มีการปลูกพืชเมืองหนาวและพรรณไม้ต่าง ๆ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/p/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%87-The-Royal-Agricultural-Station-Angkhang-100063703592023/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>สวนพฤกษศาสตร์สมเด็จพระนางเจ้าสิริกิติ์</h3>
+        <p>
+            ตั้งอยู่ในอำเภอแม่ริม
+            เป็นแหล่งอนุรักษ์และศึกษาพรรณไม้
+            มีเส้นทางศึกษาธรรมชาติ
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/qsbgcm/?locale=th_TH&_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>พิพิธภัณฑสถานแห่งชาติเชียงใหม่</h3>
+        <p>
+            เป็นสถานที่รวบรวมโบราณวัตถุ ศิลปวัตถุ
+            และเรื่องราวเกี่ยวกับประวัติศาสตร์ล้านนา
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%9E%E0%B8%B4%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%A0%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88/197524536925384/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>หอศิลปวัฒนธรรมเมืองเชียงใหม่</h3>
+        <p>
+            เป็นแหล่งเรียนรู้ประวัติศาสตร์ ศิลปะ
+            และวัฒนธรรมของเมืองเชียงใหม่
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%AB%E0%B8%AD%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9B%E0%B8%A7%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1/259454311215506/#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>พิพิธภัณฑ์พื้นถิ่นล้านนา</h3>
+        <p>
+            จัดแสดงเรื่องราวเกี่ยวกับวิถีชีวิต
+            ศิลปะ และวัฒนธรรมล้านนา
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%9E%E0%B8%B4%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%A0%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B9%8C%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%96%E0%B8%B4%E0%B9%88%E0%B8%99%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B2-Lanna-Folklife-Museum/448606345513204?_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+
+    <div class="place">
+        <h3>ศูนย์ราชการจังหวัดเชียงใหม่</h3>
+        <p>
+            เป็นศูนย์รวมหน่วยงานราชการระดับจังหวัด
+            และเป็นสถานที่ให้บริการประชาชน
+        </p>
+        <a class="button"
+           href="https://web.facebook.com/pages/%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-Chiang-Mai-Goverment-Office-Center/102162574773331?_rdc=1&_rdr#"
+           target="_blank">
+            ติดตามข่าวสาร
+        </a>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================
+     ที่มา
+========================= -->
+
+<section class="source">
+
+
+<h2>📚 ที่มา</h2>
+
+
+<p>
+    <b>การท่องเที่ยวแห่งประเทศไทย (ททท.)</b>
+    <br>
+    <a href="https://www.tourismthailand.org/Destinations/Provinces/Chiang-Mai/101"
+       target="_blank">
+        เว็บไซต์การท่องเที่ยวแห่งประเทศไทย
+    </a>
+</p>
+
+
+<p>
+    <b>ททท. - จุดเช็คอินห้ามพลาด จังหวัดเชียงใหม่</b>
+    <br>
+    <a href="https://thai.tourismthailand.org/Articles/จุดเช็คอินห้ามพลาดเชียงใหม่"
+       target="_blank">
+        ข้อมูลสถานที่ท่องเที่ยวเชียงใหม่
+    </a>
+</p>
+
+
+<p>
+    <b>ททท. - ดอยอินทนนท์</b>
+    <br>
+    <a href="https://www.tourismthailand.org/Articles/mountain-savouring-the-greens-at-doi-inthanon"
+       target="_blank">
+        ข้อมูลอุทยานแห่งชาติดอยอินทนนท์
+    </a>
+</p>
+
+
+<p>
+    <b>ททท. - เที่ยวเชียงใหม่ 3 วัน 2 คืน</b>
+    <br>
+    <a href="https://www.tourismthailand.org/Articles/self-driving-chiang-mai"
+       target="_blank">
+        ข้อมูลสถานที่ท่องเที่ยวเชียงใหม่
+    </a>
+</p>
+
+
+<p>
+    <b>ททท. - เที่ยวเชียงใหม่แบบประหยัด</b>
+    <br>
+    <a href="https://www.tourismthailand.org/Articles/budget-chiang-mai-trip"
+       target="_blank">
+        ข้อมูลวัดและสถานที่สำคัญในเชียงใหม่
+    </a>
+</p>
+
+
+</section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p><b>เว็บไซต์เพื่อการทดสอบ</b></p>
+
+<p>
+    ท่องเที่ยว ณ เชียงใหม่
+</p>
+
+<p>
+    © 2026 Chiang Mai Travel Website
+</p>
+
+
+</footer>
+
+</body>
+</html>
